@@ -1,0 +1,46 @@
+backend:
+  # name: github
+  # repo: maciejmatu/smoothielicious
+  name: git-gateway
+  branch: master
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "src/pages/blog"
+    create: true
+    fields:
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "products"
+    lable: "Products"
+    folder: "src/pages/products"
+    create: true
+    fields:
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "desription" }
+      - { label: "Ingredients", name: "ingredients", widget: "list" }
+      - { label: "Image", name: "image", widget: "image" }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/pages/about/index.md"
+        label: "About"
+        name: "about"
+        fields:
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - file: "src/pages/products/index.md"
+        label: "Products Page"
+        name: "products"
+        fields:
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "products-page" }
+          - { label: "Description", name: title, widget: "markdown" }
