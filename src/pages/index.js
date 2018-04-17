@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class IndexPage extends Component {
   render() {
     return (
-      <p>Index File</p>
+      <h1>Index Page</h1>
     )
   }
 }

@@ -1,17 +1,29 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import * as config from '../config'
+import Navigation from '../components/Navigation'
 
-const TemplateWrapper = ({ children }) => (
+const TemplateWrapper = ({ children, data }) => (
   <div>
-    <Helmet title={config.PROJECT_NAME} />
+    <Helmet title={data.site.siteMetadata.title} />
+    <Navigation />
     <div>{children()}</div>
   </div>
 )
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func,
+  data: PropTypes.object,
 }
+
+export const query = graphql`
+  query TemplateQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
 
 export default TemplateWrapper
