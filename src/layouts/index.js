@@ -1,13 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import Navigation from '../components/Navigation'
+import Navbar from '../components/Navbar'
 
 const TemplateWrapper = ({ children, data }) => (
   <div>
     <Helmet title={data.site.siteMetadata.title} />
-    <Navigation />
-    <div>{children()}</div>
+    <header>
+      <Navbar />
+    </header>
+    <main>{children()}</main>
   </div>
 )
 
@@ -17,7 +19,7 @@ TemplateWrapper.propTypes = {
 }
 
 export const query = graphql`
-  query TemplateQuery {
+  query Metadata {
     site {
       siteMetadata {
         title

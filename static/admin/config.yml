@@ -1,7 +1,51 @@
+# backend:
+#   name: github
+#   repo: maciejmatu/smoothielicious
+#   branch: master
+
+# media_folder: static/img
+# public_folder: /img
+
+# collections:
+#   - name: "blog"
+#     label: "Blog"
+#     folder: "src/pages/blog"
+#     create: true
+#     fields:
+#       - { label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post.template" }
+#       - { label: "Title", name: "title", widget: "string" }
+#       - { label: "Body", name: "body", widget: "markdown" }
+
+#   - name: "products"
+#     label: "Products"
+#     folder: "src/pages/products"
+#     create: true
+#     fields:
+#       - { label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page.template" }
+#       - { label: "Title", name: "title", widget: "string" }
+#       - { label: "Description", name: "description", widget: "string" }
+#       - { label: "Ingredients", name: "ingredients", widget: "list" }
+#       - { label: "Image", name: "image", widget: "image" }
+
+#   - name: "pages"
+#     label: "Pages"
+#     files:
+#       - file: "src/pages/about/index.md"
+#         label: "About"
+#         name: "about"
+#         fields:
+#           - { label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page.template" }
+#           - { label: "Title", name: "title", widget: "string" }
+#           - { label: "Body", name: "body", widget: "markdown" }
+#       - file: "src/pages/products/index.md"
+#         label: "Products Page"
+#         name: "products"
+#         fields:
+#           - { label: "Template Key", name: "templateKey", widget: "hidden", default: "products-page.template" }
+#           - { label: "Description", name: "description", widget: "markdown" }
+
 backend:
-  name: github
-  repo: maciejmatu/smoothielicious
-  # name: git-gateway
+  name: git-gateway
   branch: master
 
 media_folder: static/img
@@ -12,21 +56,14 @@ collections:
     label: "Blog"
     folder: "src/pages/blog"
     create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post.template" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
-
-  - name: "products"
-    label: "Products"
-    folder: "src/pages/products"
-    create: true
-    fields:
-      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page.template" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Ingredients", name: "ingredients", widget: "list" }
-      - { label: "Image", name: "image", widget: "image" }
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list"}
 
   - name: "pages"
     label: "Pages"
@@ -35,12 +72,15 @@ collections:
         label: "About"
         name: "about"
         fields:
-          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page.template" }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"
         fields:
-          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "products-page.template" }
-          - { label: "Description", name: "description", widget: "markdown" }
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: Heading, name: heading, widget: string}
+          - {label: Description, name: description, widget: string}

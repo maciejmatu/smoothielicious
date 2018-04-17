@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-function Navigation() {
+function Navbar() {
   return (
     <nav>
       <Link to="/">Home</Link>
@@ -12,4 +12,4 @@ function Navigation() {
   )
 }
 
-export default Navigation
+export default Navbar

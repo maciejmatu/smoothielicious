@@ -1,39 +1,39 @@
 {
-  "name": "gatsby-starter-netlify-cms",
-  "description": "Example Gatsby, and Netlify CMS project",
-  "version": "1.1.1",
-  "author": "Austin Green",
+  "name": "smoothielicious",
+  "description": "Smoothielicious website",
+  "version": "1.0.0",
   "dependencies": {
-    "gatsby": "^1.9.213",
-    "gatsby-link": "^1.6.37",
-    "gatsby-plugin-netlify-cms": "^1.0.9",
-    "gatsby-plugin-react-helmet": "^2.0.5",
-    "gatsby-plugin-sass": "^1.0.17",
-    "gatsby-plugin-sharp": "^1.6.34",
-    "gatsby-remark-images": "^1.5.50",
-    "gatsby-source-filesystem": "^1.5.23",
-    "gatsby-transformer-remark": "^1.7.33",
-    "gatsby-transformer-sharp": "^1.6.21",
+    "gatsby": "^1.9.252",
+    "gatsby-link": "^1.6.40",
+    "gatsby-plugin-netlify-cms": "^2.0.1",
+    "gatsby-plugin-react-helmet": "^2.0.10",
+    "gatsby-plugin-sass": "^1.0.25",
+    "gatsby-plugin-sharp": "^1.6.42",
+    "gatsby-remark-images": "^1.5.61",
+    "gatsby-source-filesystem": "^1.5.33",
+    "gatsby-transformer-remark": "^1.7.40",
+    "gatsby-transformer-sharp": "^1.6.22",
     "lodash": "^4.17.5",
-    "lodash-webpack-plugin": "^0.11.4",
-    "prop-types": "^15.6.0",
-    "react": "^16.2.0",
+    "lodash-webpack-plugin": "^0.11.5",
+    "netlify-cms": "^1.5.0",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.2",
     "react-helmet": "^5.2.0"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "example",
+    "JAM stack",
+    "netlify-cms"
   ],
-  "license": "MIT",
-  "main": "n/a",
   "scripts": {
     "start": "npm run develop",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\""
   },
   "devDependencies": {
-    "prettier": "^1.7.4"
+    "prettier": "^1.12.1"
   }
 }
