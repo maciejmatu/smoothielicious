@@ -10,11 +10,12 @@ class IndexPage extends Component {
       <section className="section">
         <div className="container">
           <h1>View Products:</h1>
+          {console.log(posts)}
           {posts
             .filter(post => post.node.frontmatter.templateKey === 'product-page.template')
             .map(({ node: product }) => (
               <div key={product.id}>
-                <Link to={product.fields.slug}>{product.title}</Link>
+                <Link to={product.fields.slug}>{product.frontmatter.title}</Link>
               </div>
             ))}
         </div>
