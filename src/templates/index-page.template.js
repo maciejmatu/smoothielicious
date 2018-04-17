@@ -8,16 +8,25 @@ class IndexPage extends Component {
     return (
       <section className="section">
         <div className="container">
-          <h1>Latest Stories</h1>
+          <h1>View Products:</h1>
           {posts
-            .filter(post => post.node.frontmatter.templateKey === 'blog-post')
+            .filter(post => post.node.frontmatter.templateKey === 'product-page.template')
+            .map(({ node: product }) => (
+              <div key={product.id}>
+                <Link to={product.fields.slug}>{product.title}</Link>
+              </div>
+            ))}
+        </div>
+        <div className="container">
+        <h1>View Latest Posts:</h1>
+          {posts
+            .filter(post => post.node.frontmatter.templateKey === 'blog-post.template')
             .map(({ node: post }) => (
               <div key={post.id}>
                 <p>
                   <Link className="has-text-primary" to={post.fields.slug}>
                     {post.frontmatter.title}
                   </Link>
-                  <span> &bull; </span>
                   <small>{post.frontmatter.date}</small>
                 </p>
                 <p>
@@ -26,7 +35,7 @@ class IndexPage extends Component {
                 </p>
               </div>
             ))}
-        </div>
+      </div>
       </section>
     )
   }
