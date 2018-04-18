@@ -1,6 +1,19 @@
 const _ = require('lodash')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
+const cssnext = require('postcss-cssnext');
+const cssimport = require('postcss-import');
+
+exports.modifyWebpackConfig = ({ config }) => {
+  config.merge({
+    postcss: [
+      cssimport({ path: path.resolve('src') }),
+      cssnext(),
+    ],
+  });
+
+  return config;
+};
 
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators
@@ -34,7 +47,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       createPage({
         path: edge.node.fields.slug,
         component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
+          `src/templates/${String(edge.node.frontmatter.templateKey)}/index.js`
         ),
         // additional data can be passed via context
         context: {

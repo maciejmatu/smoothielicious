@@ -1,0 +1,12 @@
+@import 'style/colors';
+
+.nav__item {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+.nav__item:hover,
+.nav__item--active {
+  text-decoration: underline;
+}

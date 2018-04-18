@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Box({ tag, html, props, children }) {
+function Box({ tag, html, children, ...props }) {
   const Element = tag || 'div'
   const innerHTML = html && { __html: children }
 

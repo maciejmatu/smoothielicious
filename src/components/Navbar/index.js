@@ -1,13 +1,12 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import './style.css'
 
 function Navbar() {
   return (
-    <nav>
-      <Link to="/">Home</Link>
-      <Link to="/about">About page</Link>
-      <Link to="/products">Products page</Link>
-      <Link to="/blog">Blog</Link>
+    <nav className="nav">
+      <Link exact className="nav__item h5 p1" activeClassName="nav__item--active" to="/">Home</Link>
+      <Link className="nav__item h5 p2" activeClassName="nav__item--active" to="/about">About</Link>
     </nav>
   )
 }

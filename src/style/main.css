@@ -1,0 +1,19 @@
+@import "style/colors";
+@import "style/variables";
+
+@import url('https://fonts.googleapis.com/css?family=Gaegu:700|Lato');
+@import "normalize.css/normalize";
+@import "basscss/src/basscss";
+
+* {
+  @apply --font-primary;
+}
+
+.font-primary {
+  @apply --font-primary;
+}
+
+.font-secondary {
+  @apply --font-secondary;
+}
+

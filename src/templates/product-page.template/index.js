@@ -1,17 +1,18 @@
 import React from 'react'
-import Box from '../components/Box'
+import Box from '../../components/Box'
 
-function AboutPage({ data }) {
+function ProductsPage({ data }) {
   return (
-    <Box>
+    <div>
+      <p>Single smoothie page</p>
       <h1>{data.markdownRemark.frontmatter.title}</h1>
       <Box html>{data.markdownRemark.html}</Box>
-    </Box>
+    </div>
   )
 }
 
 export const query = graphql`
-  query AboutPage($id: String!) {
+  query ProductsPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
@@ -21,4 +22,4 @@ export const query = graphql`
   }
 `
 
-export default AboutPage
+export default ProductsPage

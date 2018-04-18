@@ -1,15 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import Navbar from '../components/Navbar'
+import '../style/main.css'
 
 const TemplateWrapper = ({ children, data }) => (
   <div>
     <Helmet title={data.site.siteMetadata.title} />
-    <header>
-      <Navbar />
-    </header>
-    <main>{children()}</main>
+    {children()}
   </div>
 )
 

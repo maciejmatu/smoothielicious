@@ -1,0 +1,13 @@
+@import 'style/colors';
+
+.header {
+  background-size: cover;
+  background-position: center center;
+  color: var(--color-white);
+}
+
+.header:after {
+  content: close-quote;
+  display: block;
+  padding-bottom: 35%;
+}
