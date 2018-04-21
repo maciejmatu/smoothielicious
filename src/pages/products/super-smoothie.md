@@ -1,8 +1,12 @@
 ---
 templateKey: product-page.template
-title: Super Smoothie
+name: Mango Tango
 image: /img/correct.png
-heading: It's tremendous
-description: I really recommend checking it out
+description: This smoothie makes you dance!
+ingredients:
+  - mango
+  - yoghurt
+  - pineapple
+  - kale
 ---
-
+It is delicious
