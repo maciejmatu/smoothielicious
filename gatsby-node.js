@@ -7,7 +7,7 @@ const cssimport = require('postcss-import');
 exports.modifyWebpackConfig = ({ config }) => {
   config.merge({
     postcss: [
-      cssimport({ path: path.resolve('src') }),
+      cssimport(),
       cssnext(),
     ],
   });

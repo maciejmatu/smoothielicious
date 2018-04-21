@@ -1,9 +1,9 @@
-@import "style/colors";
-@import "style/variables";
+@import "./colors.css";
+@import "./variables.css";
 
 @import url('https://fonts.googleapis.com/css?family=Gaegu:700|Lato');
-@import "normalize.css/normalize";
-@import "basscss/src/basscss";
+@import "~normalize.css/normalize.css";
+@import "~basscss/css/basscss.css";
 
 * {
   @apply --font-primary;

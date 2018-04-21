@@ -1,4 +1,4 @@
-@import 'style/colors';
+@import '../../style/colors.css';
 
 .header {
   background-size: cover;
