@@ -1,26 +1,16 @@
 ---
 templateKey: blog-post.template
-title: I opened my own shop!
-date: 2016-12-17T15:04:10.000Z
+title: The journey to owning a smoothie store
+date: '2018-01-10T16:04:10+01:00'
 ---
+I finally opened my imaginary smoothie store! How I did it? The story is quite long. It starts with me being 5-year old, and selling lemonade. That's how I made my first 100 thousand dollars. The trick was to sell with your looks and childish naivety. 10 years later i still use those tricks. 
 
-The SCAA updated the wheel to reflect the finer nuances needed to describe flavors more precisely. The new descriptions are more detailed and hence allow cuppers to distinguish between more flavors.
+![some random image](/img/smoothie4.jpg)
 
-While this is going to be a big change for professional coffee tasters, it means a lot to you as a consumer as well. We’ll explain how the wheel came to be, how pros use it and what the flavors actually mean.
+## Funding 101
 
-## What the updates mean to you
+Finding investors was really hard. I had a few friends in the white house, and the NSA, so that helped a bit. The first funding round was closed at 100 million dollars. I cheated a bit, because I added 'block-chain' keywords across my smoothie shop pitch. It made a lot of people interested in my business. 
 
-The Specialty Coffee Association of America (SCAA), founded in 1982, is a non-profit trade organization for the specialty coffee industry. With members located in more than 40 countries, SCAA represents every segment of the specialty coffee industry, including:
+## The Future?
 
-* producers
-* roasters
-* importers/exporters
-* retailers
-* manufacturers
-* baristas
-
-For over 30 years, SCAA has been dedicated to creating a vibrant specialty coffee community by recognizing, developing and promoting specialty coffee. SCAA sets and maintains quality standards for the industry, conducts market research, and provides education, training, resources, and business services for its members.
-
-Coffee cupping, or coffee tasting, is the practice of observing the tastes and aromas of brewed coffee. It is a professional practice but can be done informally by anyone or by professionals known as "Q Graders". A standard coffee cupping procedure involves deeply sniffing the coffee, then loudly slurping the coffee so it spreads to the back of the tongue.
-
-The coffee taster attempts to measure aspects of the coffee's taste, specifically the body (the texture or mouthfeel, such as oiliness), sweetness, acidity (a sharp and tangy feeling, like when biting into an orange), flavour (the characters in the cup), and aftertaste. Since coffee beans embody telltale flavours from the region where they were grown, cuppers may attempt to identify the coffee's origin.
+I kind-a achieved my goal already, so the next steps will be actually opening the store. Right now only the online orders work, so I highly recommend ordering a few thousand of my awesome smoothies. I'll post a next blog in the near feature, so be alert!
