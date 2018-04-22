@@ -29,6 +29,11 @@
   overflow: hidden;
   text-align: center;
 
+  &__name {
+    font-size: 20px;
+    margin: 1em 0;
+  }
+
   &__detail {
     padding: 10px;
   }
