@@ -12,7 +12,7 @@ class IndexPage extends Component {
       <div className="IndexPage">
         <Header />
         <main className="IndexPage__container">
-          <h3 className="IndexPage__heading">Our Smoothies</h3>
+          <h3 className="IndexPage__heading">{data.markdownRemark.frontmatter.smoothiesHeading}</h3>
           <div className="ProductGrid">
             {posts
               .filter(post => post.node.frontmatter.templateKey === 'product-page.template')
@@ -32,7 +32,7 @@ class IndexPage extends Component {
               ))}
           </div>
 
-          <h3 className="IndexPage__heading">View Latest Posts</h3>
+          <h3 className="IndexPage__heading">{data.markdownRemark.frontmatter.postsHeading}</h3>
           <div className="PostsGrid">
             {posts
               .filter(post => post.node.frontmatter.templateKey === 'blog-post.template')
@@ -56,7 +56,13 @@ class IndexPage extends Component {
 }
 
 export const query = graphql`
-  query IndexQuery {
+  query IndexQuery($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      frontmatter {
+        postsHeading
+        smoothiesHeading
+      }
+    }
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {

@@ -45,3 +45,5 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page.template"}
           - {label: "Header Image", name: "headerImage", widget: "image"}
+          - {label: "Smoothies Section Heading", name: "smoothiesHeading", widget: "string"}
+          - {label: "Posts Section Heading", name: "postsHeading", widget: "string"}
