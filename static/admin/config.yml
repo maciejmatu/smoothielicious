@@ -26,7 +26,6 @@ collections:
       - {label: "Image", name: "image", widget: "image"}
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Ingredients", name: "ingredients", widget: "list"}
-      - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "pages"
     label: "Pages"
