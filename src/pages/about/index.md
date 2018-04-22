@@ -1,18 +1,15 @@
 ---
-templateKey: 'about-page.template'
-title: About our values
+templateKey: about-page.template
+title: About Smoothielicious
 ---
-### Shade-grown coffee
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
+### We care about our smoothies
+Each of our product is handled with care. When our smoothies are aging, we play them Bach and Mozart.
 
-### Single origin
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+### Plastic Free
+We don't use plastic. We care about seagulls and stuff. We use only recycled glass bottles. Sometimes we even don't wash the bottles before reusing them, because we want to save water. Take an example of use. Go 200% green!
 
-### Sustainable farming
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
+### Best Ingredients
+All our fruits are imported from their origin countries. We bought a couple of F-16 jets, to transport them as fast as possible, without loosing any flavour. Oil is overrated. The real country value lies in it's fruit.
 
-### Direct sourcing
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
-
-### Reinvest profits
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
+### Approved Taste
+We got the best possible ratings from the biggest smoothie critics, and it wasn't because we employ the only two of them, that are currently working. They truly forgot about the fact that they rely on us when it comes to their well being and salary.
