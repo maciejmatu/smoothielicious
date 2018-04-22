@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import Header from '../../components/Header'
-import './style.scss';
+import './style.scss'
 
 class IndexPage extends Component {
   render() {
