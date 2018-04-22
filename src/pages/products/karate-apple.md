@@ -1,11 +1,11 @@
 ---
 templateKey: product-page.template
-name: Karate Apple
+name: Karate Yoghurt
 image: /img/smoothie1.jpg
 description: Almost too tasty to handle
 ingredients:
-  - apple
-  - blueberry
-  - chia
-  - milk
+  - yoghurt
+  - raspberry chia seeds
+  - kale
 ---
+
