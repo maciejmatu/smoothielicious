@@ -6,4 +6,15 @@
   &__container {
     @include page-container;
   }
+
+  &__heading {
+    text-align: center;
+    text-transform: uppercase;
+    color: darken($color-blue, 10%);
+    margin: 30px 0;
+  }
+
+  &__text {
+    @include markdown-styling;
+  }
 }

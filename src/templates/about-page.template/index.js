@@ -9,8 +9,8 @@ function AboutPage({ data }) {
     <Box className="AboutPage">
       <Header imageSrc={blueOrangeImg} />
       <Box className="AboutPage__container">
-        <h1>{data.markdownRemark.frontmatter.title}</h1>
-        <Box html>{data.markdownRemark.html}</Box>
+        <h1 className="AboutPage__heading">{data.markdownRemark.frontmatter.title}</h1>
+        <Box html className="AboutPage__text">{data.markdownRemark.html}</Box>
       </Box>
     </Box>
   )
