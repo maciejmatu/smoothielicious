@@ -1,11 +1,12 @@
 ---
 templateKey: product-page.template
-name: Mango Tango
+name: Strawberry Silliness
 image: /img/smoothie3.jpg
 description: This smoothie makes you dance!
 ingredients:
-  - mango
-  - yoghurt
-  - pineapple
-  - kale
+  - strawberry
+  - raspberry
+  - apple
+  - straw (lol)
 ---
+

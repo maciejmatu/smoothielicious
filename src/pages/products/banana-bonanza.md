@@ -2,10 +2,11 @@
 templateKey: product-page.template
 name: Banana Bonanza
 image: /img/smoothie2.jpg
-description: It's so banany you're gonna die
+description: 'Pranked: It doesn''t contain bananas'
 ingredients:
-  - banana
-  - yoghurt
-  - kiwi
+  - mango
   - mint
+  - whipped cream
+  - kardamon
 ---
+
