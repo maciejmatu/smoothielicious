@@ -1,11 +1,17 @@
 import React from 'react'
-import Box from '../../components/Box';
+import Box from '../../components/Box'
+import Header from '../../components/Header'
+import blueOrangeImg from '../../img/orangeBg.png'
+import './style.scss'
 
 function BlogPost({ data: { markdownRemark } }) {
   return (
-    <Box>
-      <h1>{markdownRemark.frontmatter.title}</h1>
-      <Box html>{markdownRemark.html}</Box>
+    <Box className="PostPage">
+      <Header imageSrc={blueOrangeImg} />
+      <Box className="PostPage__container">
+        <h1 className="PostPage__heading">{markdownRemark.frontmatter.title}</h1>
+        <Box html className="PostPage__text">{markdownRemark.html}</Box>
+      </Box>
     </Box>
   )
 }
