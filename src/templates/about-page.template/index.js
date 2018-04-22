@@ -6,10 +6,12 @@ import './style.scss'
 
 function AboutPage({ data }) {
   return (
-    <Box>
+    <Box className="AboutPage">
       <Header imageSrc={blueOrangeImg} />
-      <h1>{data.markdownRemark.frontmatter.title}</h1>
-      <Box html>{data.markdownRemark.html}</Box>
+      <Box className="AboutPage__container">
+        <h1>{data.markdownRemark.frontmatter.title}</h1>
+        <Box html>{data.markdownRemark.html}</Box>
+      </Box>
     </Box>
   )
 }

@@ -1,0 +1,82 @@
+@import 'src/style/resources';
+
+.IndexPage {
+  background: lighten($color-pink, 10%);
+
+  &__container {
+    @include page-container;
+
+    padding: 20px 0;
+  }
+
+  &__heading {
+    text-transform: uppercase;
+    font-size: 30px;
+    color: darken($color-pink, 10%);
+    text-align: center;
+  }
+}
+
+.ProductGrid,
+.PostsGrid {
+  @include default-grid;
+}
+
+.Product {
+  border-radius: 5px;
+  margin: 10px;
+  background: rgba($color-white, 0.8);
+  overflow: hidden;
+  text-align: center;
+
+  &__detail {
+    padding: 10px;
+  }
+
+  &__image {
+    background-size: cover;
+    background-position: center center;
+
+    &:after {
+      content: close-quote;
+      display: block;
+      width: 100%;
+      padding-bottom: 70%;
+    }
+  }
+
+  &__tags {
+    margin: 1.33em 0;
+  }
+
+  &__tag {
+    color: $color-blue;
+    border-radius: 20px;
+    font-size: 14px;
+    margin: 0 5px;
+    border: 2px solid currentColor;
+    padding: 5px;
+  }
+}
+
+.Post {
+  border-radius: 5px;
+  background: rgba($color-white, 0.6);
+  padding: 20px;
+  margin: 10px;
+
+  &__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-black;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__heading {
+    font-size: 20px;
+    color: darken($color-pink, 10%);
+  }
+}

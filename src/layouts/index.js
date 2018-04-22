@@ -2,9 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import '../style/main.scss'
+import './index.scss'
 
 const TemplateWrapper = ({ children, data }) => (
-  <div>
+  <div className="Layout">
     <Helmet title={data.site.siteMetadata.title} />
     {children()}
   </div>

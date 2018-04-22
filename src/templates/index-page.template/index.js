@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import Header from '../../components/Header'
+import './style.scss';
 
 class IndexPage extends Component {
   render() {
@@ -8,39 +9,47 @@ class IndexPage extends Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div>
-      <Header />
-        <section className="section">
-          <div className="container">
-            <h1>View Products:</h1>
+      <div className="IndexPage">
+        <Header />
+        <main className="IndexPage__container">
+          <h3 className="IndexPage__heading">Our Smoothies</h3>
+          <div className="ProductGrid">
             {posts
               .filter(post => post.node.frontmatter.templateKey === 'product-page.template')
               .map(({ node: product }) => (
-                <div key={product.id}>
-                  <Link to={product.fields.slug}>{product.frontmatter.title}</Link>
+                <div key={product.id} className="ProductGrid__item Product">
+                  <div className="Product__image" style={{ backgroundImage: `url(${product.frontmatter.image})` }}></div>
+                  <div className="Product__detail">
+                    <h4 className="Product__name">{product.frontmatter.name}</h4>
+                    <p className="Product__description">{product.frontmatter.description}</p>
+                    <div className="Product__tags">
+                      {product.frontmatter.ingredients.map((ingredient, index) => (
+                        <span key={index} className="Product__tag">{ingredient}</span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               ))}
           </div>
-          <div className="container">
-          <h1>View Latest Posts:</h1>
+
+          <h3 className="IndexPage__heading">View Latest Posts</h3>
+          <div className="PostsGrid">
             {posts
               .filter(post => post.node.frontmatter.templateKey === 'blog-post.template')
               .map(({ node: post }) => (
-                <div key={post.id}>
-                  <p>
-                    <Link className="has-text-primary" to={post.fields.slug}>
-                      {post.frontmatter.title}
-                    </Link>
-                    <small>{post.frontmatter.date}</small>
-                  </p>
-                  <p>
-                    {post.excerpt}<br />
-                    <Link className="button is-small" to={post.fields.slug}>Keep Reading →</Link>
-                  </p>
+                <div key={post.id} className="PostsGrid__item Post">
+                  <Link className="Post__heading Post__link" to={post.fields.slug}>
+                    {post.frontmatter.title}
+                  </Link>
+                  <br />
+                  <small className="Post__date">{post.frontmatter.date}</small>
+                  <p>{post.excerpt}</p>
+                  <Link className="Post__link" to={post.fields.slug}>Keep Reading →</Link>
                 </div>
-              ))}
-        </div>
-        </section>
+              )
+            )}
+          </div>
+        </main>
       </div>
     )
   }
@@ -51,15 +60,19 @@ export const query = graphql`
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
-          excerpt(pruneLength: 400)
+          excerpt(pruneLength: 300)
           id
           fields {
             slug
           }
           frontmatter {
-            title
+            name
             templateKey
+            image
+            description
+            ingredients
             date(formatString: "MMMM DD, YYYY")
+            title
           }
         }
       }

@@ -1,0 +1,10 @@
+@mixin default-grid() {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+@mixin page-container() {
+  margin: 0 auto;
+  max-width: 900px;
+  width: 85%;
+}

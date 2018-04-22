@@ -4,10 +4,11 @@
   background-size: cover;
   background-position: center center;
   color: $color-white;
-}
+  max-height: 55vh;
 
-.header:after {
-  content: close-quote;
-  display: block;
-  padding-bottom: 35%;
+  &:after {
+    content: close-quote;
+    display: block;
+    padding-bottom: 35%;
+  }
 }

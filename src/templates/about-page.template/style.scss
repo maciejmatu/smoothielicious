@@ -1,0 +1,9 @@
+@import 'src/style/resources';
+
+.AboutPage {
+  background: lighten($color-blue, 35%);
+
+  &__container {
+    @include page-container;
+  }
+}
