@@ -1,9 +1,9 @@
-@import '../../style/colors.css';
+@import '../../style/colors';
 
 .nav__item {
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--color-white);
+  color: $color-white;
 }
 
 .nav__item:hover,

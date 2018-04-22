@@ -1,9 +1,9 @@
-@import '../../style/colors.css';
+@import '../../style/colors';
 
 .header {
   background-size: cover;
   background-position: center center;
-  color: var(--color-white);
+  color: $color-white;
 }
 
 .header:after {

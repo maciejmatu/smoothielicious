@@ -2,7 +2,7 @@ import React from 'react'
 import Box from '../../components/Box'
 import blueOrangeImg from '../../img/orangeBg.png'
 import Header from '../../components/Header'
-import './style.css'
+import './style.scss'
 
 function AboutPage({ data }) {
   return (

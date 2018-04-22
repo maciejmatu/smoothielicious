@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../Navbar'
 import Box from '../Box'
 import bananaBg from '../../img/bananaBg.png'
-import './style.css'
+import './style.scss'
 
 function Header({ imageSrc }) {
   return (

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import '../style/main.css'
+import '../style/main.scss'
 
 const TemplateWrapper = ({ children, data }) => (
   <div>

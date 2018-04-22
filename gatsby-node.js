@@ -4,17 +4,6 @@ const { createFilePath } = require('gatsby-source-filesystem')
 const cssnext = require('postcss-cssnext');
 const cssimport = require('postcss-import');
 
-exports.modifyWebpackConfig = ({ config }) => {
-  config.merge({
-    postcss: [
-      cssimport(),
-      cssnext(),
-    ],
-  });
-
-  return config;
-};
-
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators
 
