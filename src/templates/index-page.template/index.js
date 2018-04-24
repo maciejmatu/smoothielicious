@@ -20,7 +20,7 @@ class IndexPage extends Component {
                 <div key={product.id} className="ProductGrid__item Product">
                   <div className="Product__image" style={{ backgroundImage: `url(${product.frontmatter.image})` }}></div>
                   <div className="Product__detail">
-                    <h4 className="Product__name">{product.frontmatter.name}</h4>
+                    <h4 className="Product__name">{product.frontmatter.title}</h4>
                     <p className="Product__description">{product.frontmatter.description}</p>
                     <div className="Product__tags">
                       {product.frontmatter.ingredients.map((ingredient, index) => (
@@ -72,7 +72,7 @@ export const query = graphql`
             slug
           }
           frontmatter {
-            name
+            title
             templateKey
             image
             description
