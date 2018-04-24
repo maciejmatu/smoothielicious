@@ -1,0 +1,51 @@
+@import '../../style/colors';
+
+.Form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+
+  &__button {
+    margin-top: 25px;
+    min-width: 150px;
+    background-color: rgba($color-white, 0.2);
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: 20px;
+    border: 2px solid rgba($color-black, 0.8);
+    box-shadow: none;
+  }
+}
+
+.FormItem {
+  text-align: center;
+  display: block;
+
+  &__title {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 25px 0 15px 0;
+  }
+
+  &__input {
+    outline: none;
+    border-radius: 4px;
+    background: white;
+    border: none;
+    font-size: 14px;
+    padding: 15px;
+    min-width: 300px;
+    box-shadow: 0 5px 5px 0 rgba($color-black, 0.05);
+    color: lighten($color-black, 2%);
+    transition: box-shadow .3s ease;
+    resize: none;
+
+    &:focus {
+      box-shadow: 0 2px 5px 0 rgba($color-black, 0.15);
+    }
+  }
+}

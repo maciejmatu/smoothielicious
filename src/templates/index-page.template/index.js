@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import Header from '../../components/Header'
+import ContactForm from '../../components/ContactForm/index';
 import './style.scss'
 
 class IndexPage extends Component {
@@ -49,6 +50,8 @@ class IndexPage extends Component {
               )
             )}
           </div>
+
+          <ContactForm />
         </main>
       </div>
     )
