@@ -3,7 +3,7 @@ import './style.scss';
 
 function ContactForm(props) {
   return (
-    <form className="Form" name="contact" method="POST" data-netlify="true" {...props}>
+    <form className="Form" name="contact" action="/success" method="POST" data-netlify="true" {...props}>
       <label className="FormItem">
         <p className="FormItem__title">Your Name:</p>
         <input className="FormItem__input" type="text" name="name" />
