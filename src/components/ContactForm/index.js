@@ -16,7 +16,7 @@ function handleSubmit(e) {
 
 function ContactForm(props) {
   return (
-    <form onSubmit={this.handleSubmit} className="Form" name="contact" action="/success/" method="POST" data-netlify="true" {...props}>
+    <form onSubmit={handleSubmit} className="Form" name="contact" action="/success/" method="POST" data-netlify="true" {...props}>
       <label hidden>
         Don’t fill this out: <input name="bot-field" />
       </label>
