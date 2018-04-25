@@ -1,6 +1,12 @@
 [build]
-  publish = "public"
+  publish = "public/"
   command = "npm run build"
+  functions = "functions/"
 [build.environment]
   YARN_VERSION = "1.3.2"
   YARN_FLAGS = "--no-ignore-optional"
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+  force = true
