@@ -51,6 +51,7 @@ class IndexPage extends Component {
             )}
           </div>
 
+          <h3 className="IndexPage__heading">{data.markdownRemark.frontmatter.contactHeading}</h3>
           <ContactForm />
         </main>
       </div>
@@ -64,6 +65,7 @@ export const query = graphql`
       frontmatter {
         postsHeading
         smoothiesHeading
+        contactHeading
       }
     }
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {

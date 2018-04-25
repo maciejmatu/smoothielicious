@@ -46,3 +46,4 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page.template"}
           - {label: "Smoothies Section Heading", name: "smoothiesHeading", widget: "string"}
           - {label: "Posts Section Heading", name: "postsHeading", widget: "string"}
+          - {label: "Contact Section Heading", name: "contactHeading", widget: "string"}

@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 0;
+  padding: 20px 0;
 
   &__button {
     margin-top: 25px;
@@ -31,6 +31,10 @@
     margin: 25px 0 15px 0;
   }
 
+  &__textarea {
+    min-height: 100px;
+  }
+
   &__input {
     outline: none;
     border-radius: 4px;
@@ -38,7 +42,7 @@
     border: none;
     font-size: 14px;
     padding: 15px;
-    min-width: 300px;
+    min-width: 350px;
     box-shadow: 0 5px 5px 0 rgba($color-black, 0.05);
     color: lighten($color-black, 2%);
     transition: box-shadow .3s ease;

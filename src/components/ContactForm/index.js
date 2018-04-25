@@ -18,7 +18,7 @@ function ContactForm({ original, ...props }) {
 
       <label className="FormItem">
         <p className="FormItem__title">Your Message:</p>
-        <textarea className="FormItem__input" name="message" />
+        <textarea className="FormItem__input FormItem__textarea" name="message" />
       </label>
 
       <div className="FormItem__recaptcha" data-netlify-recaptcha></div>
