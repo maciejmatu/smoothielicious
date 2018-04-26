@@ -20,7 +20,8 @@
     "normalize.css": "^8.0.0",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "webpack-node-externals": "^1.7.2"
   },
   "keywords": [
     "gatsby",
