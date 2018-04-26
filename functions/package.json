@@ -1,0 +1,8 @@
+{
+  "name": "smoothielicious-functions",
+  "version": "1.0.0",
+  "description": "Lambda functions for smoothielicious website",
+  "dependencies": {
+    "mongodb": "^3.0.7"
+  }
+}
