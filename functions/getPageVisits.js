@@ -60,17 +60,42 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports) {
+
+module.exports = require("mongodb");
+
+/***/ }),
+/* 1 */,
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-const { MongoClient } = __webpack_require__(1);
+const db = __webpack_require__(3);
+
+exports.handler = function (event, context, callback) {
+  db.getPageVisits().then(res => {
+    callback(null, {
+      statusCode: 200,
+      body: JSON.stringify(res)
+    });
+  }).catch(console.error);
+};
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+const { MongoClient } = __webpack_require__(0);
 
 const DB_URL = process.env.DB_URL || 'mongodb://localhost:27017';
 const DB_NAME = 'serverless-smoothielicious';
@@ -97,31 +122,6 @@ module.exports.getPageVisits = () => {
       db.collection('info').findOne({}, { projection: { _id: 0 } }).then(result => resolve(result));
     });
   });
-};
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-module.exports = require("mongodb");
-
-/***/ }),
-/* 2 */,
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-const db = __webpack_require__(0);
-
-exports.handler = function (event, context, callback) {
-  db.getPageVisits().then(res => {
-    callback(null, {
-      statusCode: 200,
-      body: JSON.stringify(res)
-    });
-  }).catch(console.error);
 };
 
 /***/ })

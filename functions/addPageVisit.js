@@ -60,62 +60,39 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-const { MongoClient } = __webpack_require__(1);
-
-const DB_URL = process.env.DB_URL || 'mongodb://localhost:27017';
-const DB_NAME = 'serverless-smoothielicious';
-
-function connect() {
-  return MongoClient.connect(DB_URL);
-}
-
-module.exports.addPageVisit = () => {
-  return new Promise((resolve, reject) => {
-    connect().then(client => {
-      const db = client.db(DB_NAME);
-
-      db.collection('info').findOneAndUpdate({}, { $inc: { requests: 1 } }, { projection: { _id: 0 }, returnNewDocument: true }).then(result => resolve(result.value));
-    });
-  });
-};
-
-module.exports.getPageVisits = () => {
-  return new Promise((resolve, reject) => {
-    connect().then(client => {
-      const db = client.db(DB_NAME);
-
-      db.collection('info').findOne({}, { projection: { _id: 0 } }).then(result => resolve(result));
-    });
-  });
-};
-
-/***/ }),
-/* 1 */
 /***/ (function(module, exports) {
 
 module.exports = require("mongodb");
 
 /***/ }),
-/* 2 */
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-const db = __webpack_require__(0);
+const { MongoClient } = __webpack_require__(0);
+
+const DB_URL = process.env.DB_URL || 'mongodb://localhost:27017';
+const DB_NAME = 'serverless-smoothielicious';
+
+function addPageVisit() {
+  return new Promise((resolve, reject) => {
+    MongoClient.connect(DB_URL).then(client => {
+      const db = client.db(DB_NAME);
+
+      db.collection('info').findOneAndUpdate({}, { $inc: { requests: 1 } }, { projection: { _id: 0 }, returnNewDocument: true }).then(result => resolve(result.value));
+    });
+  });
+}
 
 exports.handler = function (event, context, callback) {
-  db.addPageVisit().then(res => {
+  addPageVisit().then(res => {
     callback(null, {
       statusCode: 200,
       body: JSON.stringify(res)
