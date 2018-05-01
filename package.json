@@ -17,6 +17,7 @@
     "gatsby-transformer-sharp": "^1.6.22",
     "lodash": "^4.17.5",
     "netlify-cms": "^1.5.0",
+    "node-fetch": "^2.1.2",
     "normalize.css": "^8.0.0",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
@@ -30,14 +31,13 @@
     "netlify-cms"
   ],
   "scripts": {
-    "start": "npm run develop",
+    "start": "npm run develop && npm run lambda-start",
     "build": "gatsby build && npm run lambda-build",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
-    "lambda-install": "cd src/lambda && npm install && cd ../../",
-    "lambda-start": "npm run lambda-install && netlify-lambda -c lambda-config.js serve src/lambda",
-    "lambda-build": "npm run lambda-install && cp -r ./src/lambda ./functions"
+    "lambda-start": "netlify-lambda serve src/lambda",
+    "lambda-build": "cp -r ./src/lambda ./functions"
   },
   "devDependencies": {
     "netlify-lambda": "^0.4.0",
