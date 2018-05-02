@@ -1,6 +1,6 @@
 ---
 templateKey: product-page.template
-name: Banana Bonanza
+title: Banana Bonanza
 image: /img/smoothie2.jpg
 description: 'Pranked: It doesn''t contain bananas'
 ingredients:
