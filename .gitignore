@@ -9,3 +9,4 @@ static/admin/*.bundle.*
 yarn-error.log
 # lambda functions
 functions
+.env
