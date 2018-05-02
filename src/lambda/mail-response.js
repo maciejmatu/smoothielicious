@@ -6,6 +6,8 @@ exports.handler = function(event, context, callback) {
   const user = process.env.MAIL_USER;
   const pass = process.env.MAIL_PASSWORD;
 
+  console.log('setup transporter');
+
   let transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 587,
@@ -13,10 +15,11 @@ exports.handler = function(event, context, callback) {
     auth: { user, pass }
   });
 
+  console.log('read data');
   const { data } = JSON.parse(event.body);
-  console.log(data);
 
   if (!data || !data.email) {
+    console.log('data error', data);
     return callback(null, {
       statusCode: 400,
       body: 'Mailing details not provided'
@@ -32,6 +35,8 @@ exports.handler = function(event, context, callback) {
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
+      console.log('email sending error');
+
       return callback(null, {
         statusCode: 500,
         body: JSON.stringify(error)
