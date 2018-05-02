@@ -1,5 +1,6 @@
 import React from "react"
-import ContactForm from './components/ContactForm';
+import ContactForm from './components/ContactForm'
+import faviconPng from './img/favicon.png'
 
 let stylesStr
 if (process.env.NODE_ENV === `production`) {
@@ -26,7 +27,7 @@ module.exports = class HTML extends React.Component {
         <head>
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-          <ContactForm original style={{ display: 'none' }} />
+          <link rel="icon" type="image/png" href={faviconPng} />
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -35,6 +36,7 @@ module.exports = class HTML extends React.Component {
           {css}
         </head>
         <body {...this.props.bodyAttributes}>
+          <ContactForm original style={{ display: 'none' }} />
           {this.props.preBodyComponents}
           <div
             key={`body`}
