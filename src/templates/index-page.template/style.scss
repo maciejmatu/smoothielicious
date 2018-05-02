@@ -51,13 +51,16 @@
 
   &__tags {
     margin: 1.33em 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   &__tag {
     color: $color-blue;
     border-radius: 20px;
     font-size: 14px;
-    margin: 0 5px;
+    margin: 0 5px 5px;
     border: 2px solid currentColor;
     padding: 5px 10px;
   }

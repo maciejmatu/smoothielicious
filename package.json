@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "dependencies": {
     "basscss": "^8.0.4",
+    "concurrently": "^3.5.1",
     "gatsby": "^1.9.252",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-netlify-cms": "^2.0.1",
@@ -30,7 +31,7 @@
     "netlify-cms"
   ],
   "scripts": {
-    "start": "npm run develop && npm run lambda-start",
+    "start": "concurrently 'npm run develop' 'npm run lambda-start'",
     "build": "gatsby build && npm run lambda-build",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
