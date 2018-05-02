@@ -13,8 +13,10 @@ exports.handler = function(event, context, callback) {
     auth: { user, pass }
   });
 
-  if (!event.body || !event.body.data) {
-    callback(null, {
+  console.log(event.body);
+
+  if (!event.body || !event.body.data || !event.body.data.email) {
+    return callback(null, {
       statusCode: 400,
       body: 'Mailing details not provided'
     })
