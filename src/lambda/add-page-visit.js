@@ -4,13 +4,20 @@ const DB_URL = process.env.DB_URL || 'mongodb://localhost:27017';
 const DB_NAME = 'serverless-smoothielicious';
 
 function addPageVisit() {
-  return MongoClient.connect(DB_URL)
-    .then(client => {
+  return MongoClient.connect(`${DB_URL}/${DB_NAME}`)
+    .then((client) => {
       const db = client.db(DB_NAME);
 
       return db.collection('info')
-        .findOneAndUpdate({}, { $inc: { requests: 1 } }, { projection: { _id: 0 }, returnNewDocument: true })
-    });
+        .findOneAndUpdate({}, {
+          $inc: { requests: 1 }
+        }, {
+          projection: { _id: 0 },
+          upsert: true,
+          returnOriginal: false
+        }
+      )
+    })
 }
 
 
