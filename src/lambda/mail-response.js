@@ -13,9 +13,10 @@ exports.handler = function(event, context, callback) {
     auth: { user, pass }
   });
 
-  console.log(event.body);
+  const { data } = JSON.parse(event.body);
+  console.log(data);
 
-  if (!event.body || !event.body.data || !event.body.data.email) {
+  if (!data || !data.email) {
     return callback(null, {
       statusCode: 400,
       body: 'Mailing details not provided'
@@ -24,9 +25,9 @@ exports.handler = function(event, context, callback) {
 
   let mailOptions = {
     from: `"Maciej 🥝 Smoothielicious" <${user}>`,
-    to: event.body.data.email,
+    to: data.email,
     subject: "🍇 Contact submission received! 🍌",
-    html: createHtmlMail({ name: event.body.data.name })
+    html: createHtmlMail({ name: data.name })
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
@@ -37,7 +38,7 @@ exports.handler = function(event, context, callback) {
       });
     }
 
-    console.log(event.body.data);
+    console.log(data);
 
     callback(null, {
       statusCode: 200,
