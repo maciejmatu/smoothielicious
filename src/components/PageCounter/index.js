@@ -1,14 +1,12 @@
 import React from 'react'
 import style from './style.scss';
 
-function PageCounter({ count }) {
+function PageCounter({ visitCount }) {
+  if (visitCount) return null;
+
   return (
     <div className="counter">
-      {count ? (
-        <h4>Our shop is sooo popular, we already have {count} visits!</h4>
-      ) : (
-        <h4>Loading...</h4>
-      )}
+      <h4>Our shop is sooo popular, we already have {visitCount} visits!</h4>
     </div>
   )
 }

@@ -7,15 +7,22 @@ import './index.scss'
 
 class TemplateWrapper extends React.Component {
   state = {
-    visitCount: null
+    visitCount: null,
+    noDbConnection: false
   }
 
   componentDidMount() {
     fetch('/api/add-page-visit')
-      .then(res => res.json())
-      .then(data => {
-        this.setState({ visitCount: data.value.requests })
+      .then(res => {
+        if (res.status < 200 || res.status >= 300) {
+          return Promise.reject('No db connection')
+        }
+
+        const data = res.json()
+
+        this.setState({ visitCount: res.data.value.requests })
       })
+      .catch(console.warn);
   }
 
   render() {
@@ -24,7 +31,7 @@ class TemplateWrapper extends React.Component {
     return (
       <div className="Layout">
         <Helmet title={data.site.siteMetadata.title} />
-        <PageCounter count={this.state.visitCount} />
+        <PageCounter {...this.state} />
         {children()}
       </div>
     );
