@@ -20,17 +20,23 @@ exports.handler = function(event, context, callback) {
 
   if (!data || !data.email) {
     console.log('data error', data);
+
     return callback(null, {
       statusCode: 400,
       body: 'Mailing details not provided'
     })
   }
 
+  const mailContent = createMailTemplate({
+    title: 'Smoothielicious',
+    name: data.name
+  });
+
   let mailOptions = {
     from: `"Maciej 🥝 Smoothielicious" <${user}>`,
     to: data.email,
     subject: "🍇 Contact submission received! 🍌",
-    html: createMailTemplate({ title: 'Smoothielicious', name: data.name })
+    html: mailContent
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
