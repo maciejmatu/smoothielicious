@@ -1,6 +1,6 @@
 require("dotenv").config();
 const nodemailer = require("nodemailer");
-const createHtmlMail = require("./modules/mail-template");
+const createMailTemplate = require("./modules/create-mail-template");
 
 exports.handler = function(event, context, callback) {
   const user = process.env.MAIL_USER;
@@ -30,7 +30,7 @@ exports.handler = function(event, context, callback) {
     from: `"Maciej 🥝 Smoothielicious" <${user}>`,
     to: data.email,
     subject: "🍇 Contact submission received! 🍌",
-    html: createHtmlMail({ name: data.name })
+    html: createMailTemplate({ title: 'Smoothielicious', name: data.name })
   };
 
   transporter.sendMail(mailOptions, (error, info) => {

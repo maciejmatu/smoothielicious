@@ -18,6 +18,7 @@
     "gatsby-transformer-remark": "^1.7.40",
     "gatsby-transformer-sharp": "^1.6.22",
     "lodash": "^4.17.5",
+    "mjml-loader": "^1.0.1",
     "mongodb": "^3.0.7",
     "netlify-cms": "^1.5.0",
     "nodemailer": "^4.6.4",
@@ -38,8 +39,8 @@
     "develop": "gatsby develop",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
-    "lambda-start": "netlify-lambda serve src/lambda",
-    "lambda-build": "netlify-lambda build src/lambda"
+    "lambda-start": "netlify-lambda serve src/lambda -c webpack.lambda.js",
+    "lambda-build": "netlify-lambda build src/lambda -c webpack.lambda.js"
   },
   "devDependencies": {
     "netlify-lambda": "^0.4.0",
