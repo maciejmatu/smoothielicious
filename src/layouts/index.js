@@ -7,8 +7,7 @@ import './index.scss'
 
 class TemplateWrapper extends React.Component {
   state = {
-    visitCount: null,
-    noDbConnection: false
+    visitCount: null
   }
 
   componentDidMount() {
@@ -18,10 +17,9 @@ class TemplateWrapper extends React.Component {
           return Promise.reject('No db connection')
         }
 
-        const data = res.json()
-
-        this.setState({ visitCount: res.data.value.requests })
+        return res.json();
       })
+      .then((data) => this.setState({ visitCount: data.value.requests }))
       .catch(console.warn);
   }
 
