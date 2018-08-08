@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post.template
-title: The journey to owning a smoothie store
+title: The wow to owning a smoothie store
 date: '2018-01-10T16:04:10+01:00'
 ---
 I finally opened my imaginary smoothie store! How I did it? The story is quite long. It starts with me being 5-year old, and selling lemonade. That's how I made my first 100 thousand dollars. The trick was to sell with your looks and childish naivety. 10 years later i still use those tricks. 
