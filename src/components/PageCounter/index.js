@@ -2,7 +2,8 @@ import React from 'react'
 import style from './style.scss';
 
 function PageCounter({ visitCount }) {
-  if (visitCount) return null;
+  console.log(visitCount);
+  if (!visitCount) return null;
 
   return (
     <div className="counter">
